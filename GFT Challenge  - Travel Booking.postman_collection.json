@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "2331f290-dcb9-443a-9e4e-5056623caa56",
+		"name": "GFT Challenge  - Travel Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7749150",
+		"_collection_link": "https://galactic-station-872117.postman.co/workspace/GFT-Challenge~ef695646-59a6-4215-9e76-fd45b4258d3c/collection/7749150-2331f290-dcb9-443a-9e4e-5056623caa56?action=share&source=collection_link&creator=7749150"
+	},
+	"item": [
+		{
+			"name": "Hotel Reservation",
+			"item": [
+				{
+					"name": "List Hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/hotel/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hotel",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/hotel/688084d3-e15a-4dbc-80bb-ea293c1f1590",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hotel",
+								"688084d3-e15a-4dbc-80bb-ea293c1f1590"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\": \"Chateau Frontenac\",\n    \"email\": \"chateaufrontenac@gmail.com\",\n    \"phone\": \"+1 418-692-3861\",\n    \"number_of_rooms\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hotel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hotel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Car Rental",
+			"item": [
+				{
+					"name": "Create Car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plate\" : \"MMX8909\",\n    \"model\": \"Honda Fit\",\n    \"price_per_day\": 50.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/car/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"car",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consult Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/car/d14e5354-361c-4ca8-b213-a4530fe25eae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"car",
+								"d14e5354-361c-4ca8-b213-a4530fe25eae"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight Reservation",
+			"item": [
+				{
+					"name": "Create Flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"origin\": \"Natal/BR\",\n    \"destination\": \"Quebec/CA\",\n    \"arrival_at\": \"2026-01-01T15:00:00\",\n    \"departure_at\": \"2026-01-01T10:00:00\",\n    \"number_of_seats\": 30,\n    \"number\": \"Air Canada - 2026\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/flight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consult Flight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/flight/7262aae3-234b-4d55-9ac1-07efa20efb09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"flight",
+								"7262aae3-234b-4d55-9ac1-07efa20efb09"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Travel Booking",
+			"item": [
+				{
+					"name": "Travel Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"car_reservation\": {\n        \"plate\": \"NNS2130\",\n        \"pickup_date\": \"2026-01-01T15:00:00\",\n        \"return_date\": \"2026-01-01T15:00:00\",\n        \"car_id\": \"\"\n    },\n    \"customer_details\": {\n        \"name\": \"Mychell Teixeira de Araújo\",\n        \"email\": \"mychellt@gmail.com\",\n        \"phone\": \"+5584996057585\"\n    },\n    \"flight_reservation\": {\n        \"id\": \"c573f07b-3c30-4c22-91b5-712e06ba46ea\",\n        \"seats\": [1,2,3]\n    },\n    \"hotel_reservation\": {\n        \"id\": \"fb5d599d-b690-4f80-84e2-b0185e57249e\",\n        \"check_in_date\": \"2026-01-01T15:00:00\",\n        \"check_out_date\": \"2026-01-01T15:00:00\",\n        \"number_of_rooms\":  2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/travel/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"travel",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
